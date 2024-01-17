@@ -1,44 +1,66 @@
 package org.example;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        printThreeWords();
-        checkSumSign(234,-235);
-        printColor(101);
-        compareNumbers(-100,-99);
+      checkSum(12, 8);
+      checkSignPrint(-10);
+      checkSignIsPositive(23);
+      printString("Сколько можно?", 5);
+      checkYear(2008);
+      getArray(7,88);
+
     }
 
-    //Метод №1
-          public static void printThreeWords(){
-            System.out.println("Orange");
-            System.out.println("Banana");
-            System.out.println("Apple");
+    public static boolean checkSum(int a, int b){
+        int sum = a + b;
+        boolean result = (sum >= 10 && sum <=20);
+        System.out.println(result);
+        return result;
     }
 
-    //Метод №2
-    public static void checkSumSign(int a, int b){
-        int result = a + b;
-        if (result >= 0) {
-            System.out.println("Сумма положительная");
+    public static void checkSignPrint(int a){
+        if (a >= 0){
+            System.out.println("Число положительное");
         } else
-            System.out.println("Сумма отрицательная");
+            System.out.println("Число отрицательное");
     }
 
-    //Метод №3
-    public static void printColor(int value){
-        if (value <= 0){
-            System.out.println("Красный");
-        } else if (value > 0 && value <= 100){
-            System.out.println("Желтый");
-        } else
-            System.out.println("Зеленый");
+    public static boolean checkSignIsPositive(int a){
+        boolean result = (a <= 0);
+        System.out.println(result);
+        return result;
     }
 
-    //Метод №4
-    public static void compareNumbers(int a, int b){
-       String result = (a >= b)? "a >= b" : "a < b";
-       System.out.println(result);
+    public static void printString(String s, int a){
+       for  (int i = 0; i < a; i++) {
+           System.out.println(s);
+       }
     }
+
+    public static boolean checkYear(int a){
+        boolean result = (a % 4 == 0 && a % 100 !=0 || a % 400 == 0);
+        System.out.println(result);
+        return result;
     }
+
+    public static int [] getArray(int len, int initialValue){
+        int[] array = new int [len];
+        for (int i = 0; i < array.length; i++){
+            array[i] = initialValue;
+        }
+        System.out.print(Arrays.toString(array));
+        return array;
+
+    }
+}
+
+
+
+
+
+
 
 
