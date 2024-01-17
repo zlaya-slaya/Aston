@@ -8,7 +8,7 @@ public class Solutions {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 1) {
                 array[i] = 0;
-            } elseg
+            } else
                 array[i] = 1;
         }
         System.out.println(Arrays.toString(array));
