@@ -1,6 +1,6 @@
 package org.example;
 
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
 
 public class Main {
@@ -46,7 +46,7 @@ public class Main {
         return result;
     }
 
-    public static int [] getArray(int len, int initialValue){
+    public static int[] getArray(int len, int initialValue){
         int[] array = new int [len];
         for (int i = 0; i < array.length; i++){
             array[i] = initialValue;
