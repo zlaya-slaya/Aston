@@ -22,7 +22,7 @@ public class Main {
         Park park1 = new Park("Kidzaния", "г.Москва, ТЦ 'АвиаПарк'", "ежедневно с 12:00 до 23:00");
         park1.getParkInfo();
 
-        Park.Attraction attraction1 = park1. new Attraction("Парижская карусель", "с 12:00 до 21:00", 250);
+        Park.Attraction attraction1 = park1. new Attraction("Парижская карусель", "с 12:00 до 22:00", 250);
         attraction1.getAttractionInfo();
 
 
