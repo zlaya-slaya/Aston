@@ -1,31 +1,53 @@
 package org.example;
 
-import java.util.Arrays;
-
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        Employee empl1 = new Employee("Michael Scott", "regional manager", "exemple@gmail.ru", "5568909888", 44, 200000);
-        empl1.getInfoEmployee();
+       //Задание №1
 
-        Employee[] empArray = new Employee[5];
-        empArray[0] = empl1;
-        empArray[1] = new Employee("Dwight Schrute,", "assistant to the regional manager", "schrute@gmail.ru", "89156789034", 40, 150000);
-        empArray[2] = new Employee("Jim Halpert", "salesman", "jim@gmail.ru", "89687359923", 32, 88000);
-        empArray[3] = new Employee("Toby Flenderson", "hr", "toby@gmail.ru", "89167774809", 42, 70666);
-        empArray[4] = new Employee("Pam Beesly", "receptionist", "beesly@gmail.ru", "89257780932", 28, 52500);
+        Cat cat1 = new Cat("Том");
+        cat1.running(20);
+        cat1.swimming(10);
 
-        for (int i = 0; i < empArray.length; i++){
-            empArray[i].getInfoEmployee();
+        Dog dog1 = new Dog("Пёсель");
+        dog1.running(499);
+        dog1.swimming(11);
+
+
+        Bowl bowl1 = new Bowl(55);
+
+        Cat[] arrayCat = {new Cat("Первый"),
+                new Cat("Второй"),
+                new Cat("Третий"),
+                new Cat("Четверный"),
+                new Cat("Пятый"),
+                new Cat("Шестой")};
+        for (int i = 0; i < arrayCat.length; i++ ){
+            arrayCat[i].eatFood(bowl1, 11);
+        }
+        for (int i = 0; i < arrayCat.length; i++){
+            arrayCat[i].getWellFed();
         }
 
 
-        Park park1 = new Park("Kidzaния", "г.Москва, ТЦ 'АвиаПарк'", "ежедневно с 12:00 до 23:00");
-        park1.getParkInfo();
-
-        Park.Attraction attraction1 = park1. new Attraction("Парижская карусель", "с 12:00 до 22:00", 250);
-        attraction1.getAttractionInfo();
+        bowl1.addFood(30);
+        bowl1.getFood();
 
 
+        Cat.getCount();
+        Dog.getCount();
+        Animal.getCount();
+
+
+    //Задание №2
+
+        Rectangle r1 = new Rectangle(4, 5, "Черный", "Белый");
+        r1.getAllInfo();
+
+        Triangle t1 = new Triangle(3, 4, 5, "Розовый", "Салатовый");
+        t1.getAllInfo();
+
+        Circle c1 = new Circle(5, "Голубой", "Синий");
+        c1.getAllInfo();
     }
 }
 
