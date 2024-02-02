@@ -4,36 +4,20 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        String[][] array = {{"546", "664", "3", "47"},
-                            {"52", "56", "743", "998"},
-                            {"766", "164", "114", "12"},
-                            {"135", "14", "15", "1226"}};
+        String[] headers = {"Value1", "Value2", "Value3"};
+        int[][] data = {{100, 200, 300}, {200, 400, 600}, {123, 500, 745}, {123, 345, 456}};
 
-        try {
-            System.out.println(calculateSumArray(array));
-        } catch (MyArraySizeException | MyArrayDataException e) {
-            System.out.println(e.getMessage());
-        }
-    }
+        AppData appData = new AppData(headers, data);
 
+        AppData.save(appData, "data.csv");
 
-    public static int calculateSumArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
-        int row = 4;
-        int column = 4;
-        if (array.length != row || array[0].length != column)
-            throw new MyArraySizeException("Ошибка в размере массива: ожидаемый размер 4х4");
-
-        int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                try {
-                    sum += Integer.parseInt(array[i][j]);
-                } catch (NumberFormatException e) {
-                    throw new MyArrayDataException("Неверный формат данных в ячейке: [" + i + "][" + j + "]");
-                }
+        AppData loadedData = AppData.load("data.csv");
+            if (loadedData != null) {
+            System.out.println(Arrays.toString(loadedData.getHeaders()));
+            for (int[] rows : loadedData.getData()) {
+                System.out.println(Arrays.toString(rows));
             }
         }
-        return sum;
     }
 }
 
