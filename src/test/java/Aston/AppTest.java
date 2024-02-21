@@ -1,37 +1,28 @@
-package Aston;
+import Aston.App;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+public class AppTest {
 
-/**
- * Unit test for simple App.
- */
-public class AppTest extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+    @Test
+    void testFactorialOfZero() {
+        assertEquals(1, App.calculateFactorial(0));
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    @Test
+    void testFactorialOfOne() {
+        assertEquals(1, App.calculateFactorial(1));
     }
 
-    /**
-     * Rigorous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    void testFactorialOfPositiveNumber() {
+        assertEquals(6, App.calculateFactorial(3));
+    }
+
+    @Test
+    void testFactorialOfNegativeNumber() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            App.calculateFactorial(-5);
+        });
     }
 }
