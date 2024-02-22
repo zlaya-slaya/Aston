@@ -1,8 +1,7 @@
-package Aston;
 public class App {
     public static void main( String[] args ) {
 
-        System.out.println(calculateFactorial(20));
+        System.out.println(calculateFactorial(15));
 
     }
 
