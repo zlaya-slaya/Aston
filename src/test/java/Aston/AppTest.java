@@ -33,7 +33,6 @@ public class AppTest{
      public void testCheckRefillTitle(){
         WebElement refillBlock = driver.findElement(By.className("pay__wrapper"));
         String blockTitle = refillBlock.getText();
-        System.out.print(blockTitle);
         Assertions.assertTrue(blockTitle.contains("Онлайн пополнение\n" + "без комиссии"));
     }
 
