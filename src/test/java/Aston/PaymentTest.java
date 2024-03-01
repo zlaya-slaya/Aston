@@ -40,7 +40,7 @@ public class PaymentTest{
         inputPhone.click();
         inputPhone.sendKeys("297777777");
         inputSum.click();
-        inputSum.sendKeys("400");
+        inputSum.sendKeys("300");
         buttonContinue.click();
         WebElement iframe = driver.findElement(By.cssSelector("body > div.bepaid-app > div > iframe"));
         driver.switchTo().frame(iframe);
@@ -50,8 +50,8 @@ public class PaymentTest{
     public void testCheckSum(){
         WebElement sumOnHeader = driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/app-header/header/div/div/div"));
         WebElement sumOnbutton = driver.findElement(By.xpath("/html/body/app-root/div/div/app-payment-container/section/app-card-page/div/div[1]/button"));
-        Assertions.assertTrue(sumOnHeader.getAttribute("innerText").contains("400"));
-        Assertions.assertTrue(sumOnbutton.getAttribute("innerText").contains("400"));
+        Assertions.assertTrue(sumOnHeader.getAttribute("innerText").contains("300"));
+        Assertions.assertTrue(sumOnbutton.getAttribute("innerText").contains("300"));
     }
 
     @Test

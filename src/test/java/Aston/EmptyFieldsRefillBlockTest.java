@@ -32,12 +32,9 @@ public class EmptyFieldsRefillBlockTest{
         WebElement inputPhone = driver.findElement(By.id("connection-phone"));
         WebElement inputSum = driver.findElement(By.id("connection-sum"));
         WebElement inputEmail = driver.findElement(By.id("connection-email"));
-        String phonePlaceholder = inputPhone.getAttribute("placeholder");
-        String sumPlaceholder = inputSum.getAttribute("placeholder");
-        String emailPlaceholder = inputEmail.getAttribute("placeholder");
-        Assertions.assertTrue(phonePlaceholder.contains("Номер телефона"));
-        Assertions.assertTrue(sumPlaceholder.contains("Сумма"));
-        Assertions.assertTrue(emailPlaceholder.contains("E-mail для отправки чека"));
+        Assertions.assertTrue(inputPhone.getAttribute("placeholder").contains("Номер телефона"));
+        Assertions.assertTrue(inputSum.getAttribute("placeholder").contains("Сумма"));
+        Assertions.assertTrue(inputEmail.getAttribute("placeholder").contains("E-mail для отправки чека"));
     }
 
     @Test
@@ -49,12 +46,9 @@ public class EmptyFieldsRefillBlockTest{
         WebElement inputNumber = driver.findElement(By.id("internet-phone"));
         WebElement inputSum = driver.findElement(By.id("connection-sum"));
         WebElement inputEmail = driver.findElement(By.id("connection-email"));
-        String NumberPlaceholder = inputNumber.getAttribute("placeholder");
-        String sumPlaceholder = inputSum.getAttribute("placeholder");
-        String emailPlaceholder = inputEmail.getAttribute("placeholder");
-        Assertions.assertTrue(NumberPlaceholder.contains("Номер абонента"));
-        Assertions.assertTrue(sumPlaceholder.contains("Сумма"));
-        Assertions.assertTrue(emailPlaceholder.contains("E-mail для отправки чека"));
+        Assertions.assertTrue(inputNumber.getAttribute("placeholder").contains("Номер абонента"));
+        Assertions.assertTrue(inputSum.getAttribute("placeholder").contains("Сумма"));
+        Assertions.assertTrue(inputEmail.getAttribute("placeholder").contains("E-mail для отправки чека"));
 
     }
 
@@ -67,12 +61,9 @@ public class EmptyFieldsRefillBlockTest{
         WebElement inputScore = driver.findElement(By.id("score-instalment"));
         WebElement inputSum = driver.findElement(By.id("instalment-sum"));
         WebElement inputEmail = driver.findElement(By.id("instalment-email"));
-        String ScorePlaceholder = inputScore.getAttribute("placeholder");
-        String sumPlaceholder = inputSum.getAttribute("placeholder");
-        String emailPlaceholder = inputEmail.getAttribute("placeholder");
-        Assertions.assertTrue(ScorePlaceholder.contains("Номер счета на 44"));
-        Assertions.assertTrue(sumPlaceholder.contains("Сумма"));
-        Assertions.assertTrue(emailPlaceholder.contains("E-mail для отправки чека"));
+        Assertions.assertTrue(inputScore.getAttribute("placeholder").contains("Номер счета на 44"));
+        Assertions.assertTrue(inputSum.getAttribute("placeholder").contains("Сумма"));
+        Assertions.assertTrue(inputEmail.getAttribute("placeholder").contains("E-mail для отправки чека"));
     }
 
     @Test
@@ -84,12 +75,9 @@ public class EmptyFieldsRefillBlockTest{
         WebElement inputScore = driver.findElement(By.id("score-arrears"));
         WebElement inputSum = driver.findElement(By.id("arrears-sum"));
         WebElement inputEmail = driver.findElement(By.id("arrears-email"));
-        String ScorePlaceholder = inputScore.getAttribute("placeholder");
-        String sumPlaceholder = inputSum.getAttribute("placeholder");
-        String emailPlaceholder = inputEmail.getAttribute("placeholder");
-        Assertions.assertTrue(ScorePlaceholder.contains("Номер счета на 2073"));
-        Assertions.assertTrue(sumPlaceholder.contains("Сумма"));
-        Assertions.assertTrue(emailPlaceholder.contains("E-mail для отправки чека"));
+        Assertions.assertTrue(inputScore.getAttribute("placeholder").contains("Номер счета на 2073"));
+        Assertions.assertTrue(inputSum.getAttribute("placeholder").contains("Сумма"));
+        Assertions.assertTrue(inputEmail.getAttribute("placeholder").contains("E-mail для отправки чека"));
     }
 
     @AfterEach
